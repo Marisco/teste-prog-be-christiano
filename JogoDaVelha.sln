@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{83540B19-662A-4A3F-941B-1D5A7AD84461}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{879B2B6C-F1CC-490C-9CEC-DF75476E011F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JogoDaVelha.Aplicacao", "JogoDaVelha.Aplicacao\JogoDaVelha.Aplicacao.csproj", "{9CDB8E79-36F0-42C3-BF34-E49D78F5CDBD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JogoDaVelha.Dados", "JogoDaVelha.Dados\JogoDaVelha.Dados.csproj", "{FE8F11AA-65BC-409D-85B1-FEA7818C465D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JogoDaVelha.Negocios", "JogoDaVelha.Negocios\JogoDaVelha.Negocios.csproj", "{F2EC5A9E-2506-415A-8E0C-E5FF1E0863B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JogoDaVelhaWebApi", "JogoDaVelhaWebApi\JogoDaVelhaWebApi.csproj", "{DBE07A9C-42F6-4E1D-B7ED-F9F8515D0534}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CDB8E79-36F0-42C3-BF34-E49D78F5CDBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDB8E79-36F0-42C3-BF34-E49D78F5CDBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDB8E79-36F0-42C3-BF34-E49D78F5CDBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDB8E79-36F0-42C3-BF34-E49D78F5CDBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8F11AA-65BC-409D-85B1-FEA7818C465D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8F11AA-65BC-409D-85B1-FEA7818C465D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8F11AA-65BC-409D-85B1-FEA7818C465D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8F11AA-65BC-409D-85B1-FEA7818C465D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2EC5A9E-2506-415A-8E0C-E5FF1E0863B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2EC5A9E-2506-415A-8E0C-E5FF1E0863B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2EC5A9E-2506-415A-8E0C-E5FF1E0863B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2EC5A9E-2506-415A-8E0C-E5FF1E0863B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBE07A9C-42F6-4E1D-B7ED-F9F8515D0534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBE07A9C-42F6-4E1D-B7ED-F9F8515D0534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBE07A9C-42F6-4E1D-B7ED-F9F8515D0534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBE07A9C-42F6-4E1D-B7ED-F9F8515D0534}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CDB8E79-36F0-42C3-BF34-E49D78F5CDBD} = {83540B19-662A-4A3F-941B-1D5A7AD84461}
+		{FE8F11AA-65BC-409D-85B1-FEA7818C465D} = {83540B19-662A-4A3F-941B-1D5A7AD84461}
+		{F2EC5A9E-2506-415A-8E0C-E5FF1E0863B8} = {83540B19-662A-4A3F-941B-1D5A7AD84461}
+		{DBE07A9C-42F6-4E1D-B7ED-F9F8515D0534} = {83540B19-662A-4A3F-941B-1D5A7AD84461}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C130A81E-8E4A-40F8-A62B-A6196C3E75BA}
+	EndGlobalSection
+EndGlobal
