@@ -1,5 +1,5 @@
 ﻿using JogoDaVelha.Dados.Contexto;
-using JogoDaVelha.Negocios.Interfaces;
+using JogoDaVelha.Negocios.Interfaces.Repositorios;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -43,7 +43,7 @@ namespace JogoDaVelha.Dados.Repositorios
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Db.Dispose();
         }
     }
 }

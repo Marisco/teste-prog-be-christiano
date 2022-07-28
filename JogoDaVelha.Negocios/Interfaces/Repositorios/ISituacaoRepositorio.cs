@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JogoDaVelha.Negocios.Interfaces
+namespace JogoDaVelha.Negocios.Interfaces.Repositorios
 {
-    public interface IPartidaRepositorio: IBaseRepositorio<Partida>
+    public interface ISituacaoRepositorio : IBaseRepositorio<Situacao>
     {
-        IEnumerable<Partida> BuscarPartidas(int Id);
     }
 }

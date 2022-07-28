@@ -1,6 +1,12 @@
 ﻿using System.Globalization;
 using System.Text.Json.Serialization;
 using AutoMapper;
+using JogoDaVelha.Aplicacao.Interfaces;
+using JogoDaVelha.Aplicacao.Servicos;
+using JogoDaVelha.Dados.Repositorios;
+using JogoDaVelha.Negocios.Interfaces.Repositorios;
+using JogoDaVelha.Negocios.Interfaces.Servicos;
+using JogoDaVelha.Negocios.Servicos;
 using JogoDaVelha.WebApi.Mappers;
 
 
@@ -33,6 +39,22 @@ var config = new MapperConfiguration(cfg =>
 var mapper = config.CreateMapper();
 
 builder.Services.AddSingleton(mapper);
+
+builder.Services.AddScoped(typeof(IJogadorServico), typeof(JogadorServico));
+builder.Services.AddScoped(typeof(IJogadorRepositorio), typeof(JogadorRepositorio));
+builder.Services.AddScoped(typeof(IJogadorServicoAplicacao), typeof(JogadorServicoAplicacao));
+
+builder.Services.AddScoped(typeof(IPartidaServico), typeof(PartidaServico));
+builder.Services.AddScoped(typeof(IPartidaRepositorio), typeof(PartidaRepositorio));
+builder.Services.AddScoped(typeof(IPartidaServicoAplicacao), typeof(PartidaServicoAplicacao));
+
+builder.Services.AddScoped(typeof(ISituacaoServico), typeof(SituacaoServico));
+builder.Services.AddScoped(typeof(ISituacaoRepositorio), typeof(SituacaoRepositorio));
+builder.Services.AddScoped(typeof(ISituacaoServicoAplicacao), typeof(SituacaoServicoAplicacao));
+
+builder.Services.AddScoped(typeof(ITabuleiroServico), typeof(TabuleiroServico));
+builder.Services.AddScoped(typeof(ITabuleiroRepositorio), typeof(TabuleiroRepositorio));
+builder.Services.AddScoped(typeof(ITabuleiroServicoAplicacao), typeof(TabuleiroServicoAplicacao));
 
 builder.Services.AddCors(options => options.AddPolicy("AllowAll", p => p
                 .AllowAnyOrigin()

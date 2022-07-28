@@ -34,7 +34,7 @@ namespace JogoDaVelha.Dados.Contexto
             modelBuilder.Configurations.Add(new JogadorConfig());
             modelBuilder.Configurations.Add(new PartidaConfig());
             modelBuilder.Configurations.Add(new SituacaoConfig());
-            modelBuilder.Configurations.Add(new TabuleiroConfig());
+            modelBuilder.Configurations.Add(new TabuleiroConfig());           
 
         }
 

@@ -1,5 +1,5 @@
 ﻿using JogoDaVelha.Negocios.Entidades;
-using JogoDaVelha.Negocios.Interfaces;
+using JogoDaVelha.Negocios.Interfaces.Repositorios;
 
 namespace JogoDaVelha.Dados.Repositorios
 {

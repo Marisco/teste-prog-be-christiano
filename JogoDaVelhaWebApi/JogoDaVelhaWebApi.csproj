@@ -15,7 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JogoDaVelha.Aplicacao\JogoDaVelha.Aplicacao.csproj" />
+    <ProjectReference Include="..\JogoDaVelha.Dados\JogoDaVelha.Dados.csproj" />
     <ProjectReference Include="..\JogoDaVelha.Negocios\JogoDaVelha.Negocios.csproj" />
   </ItemGroup>
+  
 
 </Project>

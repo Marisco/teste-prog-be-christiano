@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using JogoDaVelha.Negocios.Entidades;
 
-namespace JogoDaVelha.Negocios.Interfaces
+namespace JogoDaVelha.Negocios.Interfaces.Servicos
 {
-    public interface ITabuleiroRepositorio : IBaseRepositorio<Tabuleiro>
+    public interface ITabuleiroServico : IBaseServico<Tabuleiro>
     {
     }
 }

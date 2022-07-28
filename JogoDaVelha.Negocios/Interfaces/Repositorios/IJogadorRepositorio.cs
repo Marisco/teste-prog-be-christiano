@@ -1,7 +1,6 @@
 ﻿using JogoDaVelha.Negocios.Entidades;
-using JogoDaVelha.Negocios.Interfaces;
 
-namespace JogoDaVelha.Negocios.Interfaces
+namespace JogoDaVelha.Negocios.Interfaces.Repositorios
 {
     public interface IJogadorRepositorio : IBaseRepositorio<Jogador>
     {

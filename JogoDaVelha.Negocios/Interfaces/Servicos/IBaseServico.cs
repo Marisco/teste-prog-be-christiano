@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JogoDaVelha.Negocios.Interfaces
+namespace JogoDaVelha.Negocios.Interfaces.Servicos
 {
-    public interface IBaseRepositorio<TEntity> where TEntity : class
+    public interface IBaseServico<TEntity> where TEntity : class
     {
         void Add(TEntity obj);
         TEntity GetById(int id);

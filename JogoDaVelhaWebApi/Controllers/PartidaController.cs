@@ -1,28 +1,51 @@
-﻿using JogoDaVelha.WebApi.ViewModels;
+﻿using JogoDaVelha.Aplicacao.Interfaces;
+using JogoDaVelha.Negocios.Entidades;
+using JogoDaVelha.WebApi.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
+using JogoDaVelha.Aplicacao.Dto;
 
 namespace JogoDaVelhaWebApi.Controllers
 {
     [Route("api/Partida")]
     public class PartidaController : BaseController
     {
+        private readonly IMapper mapper;
+        private readonly IPartidaServicoAplicacao partidaServicoAplicacao;
+        
+
+        public PartidaController(IMapper mapper, 
+            IPartidaServicoAplicacao partidaServicoAplicacao            
+            )
+        {
+            this.mapper = mapper;
+            this.partidaServicoAplicacao = partidaServicoAplicacao;            
+        }
+
         [HttpGet, Route("obter")]
         public async Task<IActionResult> Obter()
         {
-            var resultado = new PartidaViewModel();
-            return ResponderJsonResult(resultado);
-        }
-        [HttpGet, Route("iniciar")]
-        public async Task<IActionResult> Iniciar()
-        {
-            var resultado = new PartidaViewModel();
+            var partida = partidaServicoAplicacao.GetAll();
+            var resultado = mapper.Map<List<PartidaViewModel>>(partida);
             return ResponderJsonResult(resultado);
         }
 
-        [HttpGet, Route("jogar")]
-        public async Task<IActionResult> Jogar()
+        [HttpGet, Route("iniciar")]
+        public async Task<IActionResult> Iniciar()
         {
-            var resultado = new PartidaViewModel();
+            //Esse método irá registrar uma nova partida.
+            var partida = partidaServicoAplicacao.IniciarPartida();            
+            var resultado = mapper.Map<PartidaViewModel>(partida);            
+            return ResponderJsonResult(resultado);
+            
+        }
+
+        [HttpPost, Route("jogar")]
+        public async Task<IActionResult> Jogar([FromBody] PartidaViewModel partidaViewMoldel)
+        {
+            var partidaAtual = mapper.Map<Partida>(partidaViewMoldel);
+            var partida = partidaServicoAplicacao.FazerJogada(partidaAtual);
+            var resultado = mapper.Map<PartidaViewModel>(partida);
             return ResponderJsonResult(resultado);
         }
         

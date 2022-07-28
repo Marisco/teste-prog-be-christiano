@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
-using JogoDaVelha.Negocios.Dto;
+using JogoDaVelha.Negocios.Entidades;
 using JogoDaVelha.WebApi.ViewModels;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 
 namespace JogoDaVelha.WebApi.Mappers
 {
@@ -10,10 +8,10 @@ namespace JogoDaVelha.WebApi.Mappers
     {
         public AutomapperConfig()
         {
-            CreateMap<JogadorDto, JogadorViewModel>().ReverseMap();
-            CreateMap<PartidaDto, PartidaViewModel>().ReverseMap();
-            CreateMap<SituacaoDto, SituacaoViewModel>().ReverseMap();
-            CreateMap<TabuleiroDto, TabuleiroViewModel>().ReverseMap();
+            CreateMap<Jogador, JogadorViewModel>().ReverseMap();
+            CreateMap<Partida, PartidaViewModel>().ReverseMap();
+            CreateMap<Situacao, SituacaoViewModel>().ReverseMap();
+            CreateMap<Tabuleiro, TabuleiroViewModel>().ReverseMap();
         }
     }
 }

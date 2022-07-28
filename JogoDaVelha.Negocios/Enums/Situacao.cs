@@ -2,7 +2,7 @@
 
 namespace JogoDaVelha.Negocios.Enums
 {
-    public enum Situacao
+    public enum SituacaoPartida
     {
         [Description("Iniciada")] Iniciada = 0,
         [Description("Empate")] Empate = 1,
