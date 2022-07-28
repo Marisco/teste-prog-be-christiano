@@ -25,7 +25,7 @@ namespace JogoDaVelhaWebApi.Controllers
         [HttpGet, Route("obter")]
         public async Task<IActionResult> Obter()
         {
-            var partida = partidaServicoAplicacao.GetAll();
+            var partida = partidaServicoAplicacao.ObterTodasPartidas();
             var resultado = mapper.Map<List<PartidaViewModel>>(partida);
             return ResponderJsonResult(resultado);
         }

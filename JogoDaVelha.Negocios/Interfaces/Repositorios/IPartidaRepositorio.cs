@@ -9,6 +9,7 @@ namespace JogoDaVelha.Negocios.Interfaces.Repositorios
 {
     public interface IPartidaRepositorio : IBaseRepositorio<Partida>
     {
-        IEnumerable<Partida> BuscarPartidas(int Id);
+        Partida ObterPartida(int Id);
+        IEnumerable<Partida> ObterTodasPartidas();
     }
 }

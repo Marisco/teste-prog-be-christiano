@@ -5,7 +5,8 @@ namespace JogoDaVelha.Aplicacao.Interfaces
     public interface IPartidaServicoAplicacao : IBaseServicoAplicacao<Partida>
     {
         Partida IniciarPartida();
-        IEnumerable<Partida> BuscarPartidas(int Id);
+        Partida ObterPartida(int Id);
+        IEnumerable<Partida> ObterTodasPartidas();
         Partida FazerJogada(Partida partidaAtual);
     }
 }

@@ -22,7 +22,7 @@ namespace JogoDaVelha.Dados.Repositorios
         public TEntity GetById(int id)
         {
             return Db.Set<TEntity>().Find(id);
-        }
+        }        
 
         public System.Collections.Generic.IEnumerable<TEntity> GetAll()
         {

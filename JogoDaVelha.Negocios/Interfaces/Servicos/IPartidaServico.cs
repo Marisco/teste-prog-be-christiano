@@ -9,7 +9,8 @@ namespace JogoDaVelha.Negocios.Interfaces.Servicos
 {
     public interface IPartidaServico: IBaseServico<Partida>
     {
-        IEnumerable<Partida> BuscarPartidas(int Id);
-        char SetProximoTuno(char turnoAtual);
+        Partida ObterPartida(int Id);
+        IEnumerable<Partida> ObterTodasPartidas();
+        char SetProximoTuno(string turnoAtual);
     }
 }

@@ -18,19 +18,26 @@ namespace JogoDaVelha.Aplicacao.Servicos
         {
             this.partidaServico = partidaServico;
             this.jogadorServico = jogadorServico;
-            this.tabuleiroServico = tabuleiroServico
+            this.tabuleiroServico = tabuleiroServico;
         }
 
-        public IEnumerable<Partida> BuscarPartidas(int Id)
+        public IEnumerable<Partida> ObterTodasPartidas()
         {
-            return partidaServico.BuscarPartidas(Id);
+            return partidaServico.ObterTodasPartidas();
+        }
+
+        public Partida ObterPartida(int Id)
+        {
+            return partidaServico.ObterPartida(Id);
         }
 
         public Partida FazerJogada(Partida partidaAtual)
         {
-            var jogada = partidaServico.GetById(partidaAtual.PartidaId);
-            // TODO Verificacar tabulero para fim de partida e setar status da partida antes do update;
-            jogada.ProximoTurno = partidaServico.SetProximoTuno(partidaAtual.ProximoTurno);
+            var jogada = partidaServico.ObterPartida(partidaAtual.PartidaId);
+            
+            // TODO Método Verificar no tabulero o fim de partida e setar status da partida antes do update;
+            
+            jogada.ProximoTurno = partidaServico.SetProximoTuno(partidaAtual.ProximoTurno.ToString());
             partidaServico.Update(jogada);
             return jogada;
         }
@@ -55,7 +62,7 @@ namespace JogoDaVelha.Aplicacao.Servicos
             partida.Jogador0 = jogador_0;
             partida.Situacao = situacao;
             partida.DataPartida = DateTime.Now;
-            partida.ProximoTurno = partidaServico.SetProximoTuno(' ');
+            partida.ProximoTurno = partidaServico.SetProximoTuno("");
             partidaServico.Add(partida);
 
             return partida;

@@ -9,6 +9,7 @@ namespace JogoDaVelha.WebApi.ViewModels
         [Key] 
         public int SituacaoId { get; set; }
         public string SituacaoPartida { get; set; }
+        
 
     }
 }

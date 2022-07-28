@@ -8,6 +8,6 @@ namespace JogoDaVelha.WebApi.ViewModels
     {
         [Key]
         public int TabuleiroId { get; set; }        
-        public string[] Posicao { get; set; }
+        public string[] Posicao { get; set; }        
     }
 }

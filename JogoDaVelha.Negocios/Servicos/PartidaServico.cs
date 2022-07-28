@@ -13,14 +13,19 @@ namespace JogoDaVelha.Negocios.Servicos
             this.partidaRepositorio = partidaRepositorio;
         }
 
-        public IEnumerable<Partida> BuscarPartidas(int Id)
+        public Partida ObterPartida(int Id)
         {
-            return partidaRepositorio.BuscarPartidas(Id);
+            return partidaRepositorio.ObterPartida(Id);
         }
 
-        public char SetProximoTuno(char turnoAtual)
+        public IEnumerable<Partida> ObterTodasPartidas()
         {
-            return turnoAtual  == 'X' ? '0' : 'X';
+            return partidaRepositorio.ObterTodasPartidas();
+        }
+
+        public char SetProximoTuno(string turnoAtual)
+        {
+            return turnoAtual  == "X" ? '0' : 'X';
         }
     }
 }
