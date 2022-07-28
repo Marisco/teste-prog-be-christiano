@@ -34,9 +34,9 @@ namespace JogoDaVelha.Aplicacao.Servicos
         public Partida FazerJogada(Partida partidaAtual)
         {
             var jogada = partidaServico.ObterPartida(partidaAtual.PartidaId);
-            
-            // TODO Método Verificar no tabulero o fim de partida e setar status da partida antes do update;
-            
+
+            // TODO Criar método que valida/verifica as jogadas no tabulero para o fim de partida jogador, status etc... antes do update;
+
             jogada.ProximoTurno = partidaServico.SetProximoTuno(partidaAtual.ProximoTurno.ToString());
             partidaServico.Update(jogada);
             return jogada;
@@ -44,6 +44,9 @@ namespace JogoDaVelha.Aplicacao.Servicos
 
             public Partida IniciarPartida()
         {
+
+            // TODO Limpar o métodos aplicando Solid
+
             Tabuleiro tabuleiro = new Tabuleiro();
             string[] posicao = { " ' - ', ' - ', ' - ', ' - ', ' - ', ' - ', ' - ', ' - ', ' - '" };
             tabuleiro.Posicao = posicao;
