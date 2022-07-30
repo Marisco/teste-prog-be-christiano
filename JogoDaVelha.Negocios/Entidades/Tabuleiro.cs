@@ -9,6 +9,6 @@ namespace JogoDaVelha.Negocios.Entidades
     public class Tabuleiro
     {
         public int TabuleiroId { get; set; }        
-        public string[] Posicao { get; set; }
+        public string[][] Posicao { get; set; }
     }
 }

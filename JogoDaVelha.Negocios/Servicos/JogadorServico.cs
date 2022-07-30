@@ -12,6 +12,6 @@ namespace JogoDaVelha.Negocios.Servicos
         {
             this.jogadorRepositorio = jogadorRepositorio;
             
-        }
+        }        
     }
 }

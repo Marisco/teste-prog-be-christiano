@@ -62,7 +62,7 @@ builder.Services.AddCors(options => options.AddPolicy("AllowAll", p => p
                 .AllowAnyMethod()
                 ));
 
-//builder.Services.AddMvc();
+builder.Services.AddMvc();
 
 var app = builder.Build();
 
@@ -72,7 +72,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors("AllowSpecificOrigin");
+app.UseCors("AllowAll");
+//app.UseMvc();
 
 app.UseHttpsRedirection();
 

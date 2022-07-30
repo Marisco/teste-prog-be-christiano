@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>{{ titulo }}</h1>
+  <div class="field">
+    <p>Nome Jogador X </p>
+    <input type="text" [(ngModel)]="model.JogadorX.Nome">
+  
+    <p>Nome Jogador 0 </p>
+    <input type="text" [(ngModel)]="model.Jogador0.Nome">
+  </div>
+
+  <h2>Situação: {{ situacao }}</h2>
+  <table>
+    <tr *ngFor="let linha of tabuleiro ; let x = index">
+      <td *ngFor="let posicao of linha; let y = index" (click)="onclick(x, y)">
+        {{ posicao }}
+      </td>
+    </tr>
+  </table>
+</div>

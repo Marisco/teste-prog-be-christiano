@@ -11,5 +11,23 @@ namespace JogoDaVelha.Negocios.Servicos
         {
             this.tabuleiroRepositorio = tabuleiroRepositorio;
         }
+
+        public void ValidarTabuleiro()
+        {
+
+        }
+
+        public void ValidarJogada()
+        {
+
+        }
+        public void ValidarPosicao()
+        {
+
+        }
+        public void GetSAtatus()
+        {
+
+        }
     }
 }

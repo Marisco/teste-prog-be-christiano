@@ -42,30 +42,32 @@ namespace JogoDaVelha.Aplicacao.Servicos
             return jogada;
         }
 
-            public Partida IniciarPartida()
+        public Partida IniciarPartida(Partida partidaAtual)
         {
+            Partida partida = new Partida()
+            {
+                Tabluleiro = new Tabuleiro()
+                {
+                    Posicao = partidaAtual.Tabluleiro.Posicao
+                },
+                JogadorX = new Jogador()
+                {
+                    Nome = partidaAtual.JogadorX.Nome
 
-            // TODO Limpar o métodos aplicando Solid
+                },
+                Jogador0 = new Jogador()
+                {
+                    Nome = partidaAtual.Jogador0.Nome
 
-            Tabuleiro tabuleiro = new Tabuleiro();
-            string[] posicao = { " ' - ', ' - ', ' - ', ' - ', ' - ', ' - ', ' - ', ' - ', ' - '" };
-            tabuleiro.Posicao = posicao;
+                },
+                Situacao = new Situacao
+                {
+                    SituacaoPartida = EnumHelper.GetDescriptionFromEnumValue(SituacaoPartida.Iniciada)
+                },
+                DataPartida = DateTime.Now,
+                ProximoTurno = partidaServico.SetProximoTuno(partidaAtual.ProximoTurno.ToString())
+            };
 
-            Jogador jogador_x = new Jogador();
-            jogador_x.Nome = "jogador_x";
-            Jogador jogador_0 = new Jogador();
-            jogador_0.Nome = "jogador_0";
-            
-            Situacao situacao = new Situacao();
-            situacao.SituacaoPartida = EnumHelper.GetDescriptionFromEnumValue(SituacaoPartida.Iniciada);
-
-            Partida partida = new Partida();
-            partida.Tabluleiro = tabuleiro;
-            partida.JogadorX = jogador_x;
-            partida.Jogador0 = jogador_0;
-            partida.Situacao = situacao;
-            partida.DataPartida = DateTime.Now;
-            partida.ProximoTurno = partidaServico.SetProximoTuno("");
             partidaServico.Add(partida);
 
             return partida;

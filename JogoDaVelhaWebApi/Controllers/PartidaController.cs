@@ -30,11 +30,12 @@ namespace JogoDaVelhaWebApi.Controllers
             return ResponderJsonResult(resultado);
         }
 
-        [HttpGet, Route("iniciar")]
-        public async Task<IActionResult> Iniciar()
+        [HttpPost, Route("iniciar")]
+        public async Task<IActionResult> Iniciar([FromBody] PartidaViewModel partidaViewMoldel)
         {
             //Esse método irá registrar uma nova partida.
-            var partida = partidaServicoAplicacao.IniciarPartida();            
+            var partidaAtual = mapper.Map<Partida>(partidaViewMoldel);
+            var partida = partidaServicoAplicacao.IniciarPartida(partidaAtual);            
             var resultado = mapper.Map<PartidaViewModel>(partida);            
             return ResponderJsonResult(resultado);
             
